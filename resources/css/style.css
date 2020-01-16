@@ -156,7 +156,7 @@ header {
     list-style: none;
     text-align: center;
     display: block;
-    overflow: auto;
+    overflow: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }

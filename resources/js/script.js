@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var nav = $('.js--main-nav');
-    var obtener_ancho = $(window).width();
     var header_height = $("header").height();
+    var nav_height = nav.height();
 
     $('.js--nav-icon').click(function() {
         var heroText = $('.hero-text-box');
@@ -10,9 +10,9 @@ $(document).ready(function(){
             heroText.fadeOut(100);
             nav.slideToggle(200, function(){
                 header_height = $("header").height();
-                var nav_height = nav.height();
+                nav_height = nav.height();
 
-                if (header_height < nav_height) {
+                if (header_height < (nav_height+150)) {
                     $("header").animate({
                         height: nav_height+150
                     }, 200);
@@ -20,11 +20,23 @@ $(document).ready(function(){
                 }
             });
         } else {
-            //$("header").height('');
+            $("header").height('');
             nav.slideToggle(100);
             heroText.fadeIn(200);
         }
 
+    });
+
+    $(window).on('resize', function(){
+        // Change the width of the div
+        header_height = $("header").height();
+        nav_height = nav.height();
+        if (header_height < (nav_height+150)) {
+            $("header").animate({
+                height: nav_height+150
+            }, 200);
+            //$("header").height(nav_height + 150);
+        }
     });
 
 });
