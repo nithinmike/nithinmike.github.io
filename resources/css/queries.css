@@ -61,6 +61,18 @@
         background-color: transparent;
     }
 
+    .btn:active {
+        background-color: #0072bb;
+    }
+
+    .btn-full:active {
+        border: 1px solid #0072bb;
+    }
+
+    .btn-ghost:active {
+        border: 1px solid #0072bb;
+    }
+
 }
 
 /* Large phones: 481 to 767px */
