@@ -38,7 +38,7 @@ $(document).ready(function(){
             //     height: nav_height+150
             // }, 200);
             //$("header").height(nav_height + 150);
-        } else {
+        } else if (nav.is(':hidden')){
             $("header").height('');
         }
     });
