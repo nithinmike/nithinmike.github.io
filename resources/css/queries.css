@@ -74,7 +74,7 @@
     }
 
     .main-nav li:hover {
-        border-bottom: none;
+        border: none;
     }
 
     .main-nav li:active {
