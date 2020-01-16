@@ -21,6 +21,7 @@ $(document).ready(function(){
             });
         } else {
             //$("header").height('');
+            $('header').css('max-height', ''); //set max height
             nav.slideToggle(100);
             heroText.fadeIn(200);
         }
@@ -32,14 +33,16 @@ $(document).ready(function(){
         header_height = $("header").height();
         nav_height = nav.height();
 
-        if (header_height < (nav_height+150)) {
+        if (nav.is(':hidden')){
+            $("header").height('');
+            $('header').css('max-height', ''); //set max height
+        } else if (header_height < (nav_height+150)) {
+            $('header').css('max-height', nav_height+150); //set max height
             $("header").height(nav_height + 150);
             // $("header").animate({
             //     height: nav_height+150
             // }, 200);
             //$("header").height(nav_height + 150);
-        } else if (nav.is(':hidden')){
-            $("header").height('');
         }
     });
 
