@@ -13,14 +13,14 @@ $(document).ready(function(){
                 nav_height = nav.height();
 
                 if (header_height < (nav_height+150)) {
-                    $("header").animate({
-                        height: nav_height+150
-                    }, 200);
-                    //$("header").height(nav_height + 150);
+                    // $("header").animate({
+                    //     height: nav_height+150
+                    // }, 200);
+                    $("header").height(nav_height + 150);
                 }
             });
         } else {
-            $("header").height('');
+            //$("header").height('');
             nav.slideToggle(100);
             heroText.fadeIn(200);
         }
@@ -31,11 +31,15 @@ $(document).ready(function(){
         // Change the width of the div
         header_height = $("header").height();
         nav_height = nav.height();
+
         if (header_height < (nav_height+150)) {
-            $("header").animate({
-                height: nav_height+150
-            }, 200);
+            $("header").height(nav_height + 150);
+            // $("header").animate({
+            //     height: nav_height+150
+            // }, 200);
             //$("header").height(nav_height + 150);
+        } else {
+            $("header").height('');
         }
     });
 
