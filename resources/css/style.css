@@ -63,6 +63,11 @@ h3 {
     text-transform: uppercase;
     text-align: center;
 }
+
+a {
+    outline: 0;
+    -moz-outline-style: none;
+}
 /* --------------------------------------------*/
 
 
