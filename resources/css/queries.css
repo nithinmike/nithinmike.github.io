@@ -73,6 +73,14 @@
         border: 1px solid #0072bb;
     }
 
+    .main-nav li:hover {
+        border-bottom: none;
+    }
+
+    .main-nav li:active {
+        border-bottom: 2px solid #0072bb;
+    }
+
 }
 
 /* Large phones: 481 to 767px */
