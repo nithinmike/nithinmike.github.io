@@ -27,21 +27,18 @@ $(document).ready(function(){
 
     });
 
-    // $(window).on('resize', function(){
-    //     // Change the width of the div
-    //     header_height = $("header").height();
-    //     nav_height = nav.height();
-    //
-    //     if (nav.is(':hidden')){
-    //         $("header").height('');
-    //         $('header').css('max-height', ''); //set max height
-    //     } else if (header_height < (nav_height+150)) {
-    //         $("header").height(nav_height + 150);
-    //         // $("header").animate({
-    //         //     height: nav_height+150
-    //         // }, 200);
-    //         //$("header").height(nav_height + 150);
-    //     }
-    // });
+    $(window).on('resize', function(){
+        // Change the width of the div
+        // header_height = $("header").height();
+        nav_height = nav.height();
+
+        if ((header_height < (nav_height+150)) && (!nav.is(':hidden'))) {
+            $("header").height(nav_height + 150);
+            // $("header").animate({
+            //     height: nav_height+150
+            // }, 200);
+            //$("header").height(nav_height + 150);
+        }
+    });
 
 });
