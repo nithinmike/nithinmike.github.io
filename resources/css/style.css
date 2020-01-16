@@ -75,8 +75,8 @@ header {
     background-position: center;
     height: 100vh;
     max-height: 500px;
+    min-height: 400px;
     position: relative;
-    z-index: 0;
 }
 
 .hero-text-box {
@@ -87,13 +87,16 @@ header {
     width: 1140px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    z-index: 1;
     pointer-events: none;
 }
 /* --------------------------------------------*/
 
 
 /* ----- buttons ----- */
+.btn {
+    pointer-events: auto;
+}
+
 .btn:link,
 .btn:visited {
     display: inline-block;
@@ -186,8 +189,8 @@ header {
     transition: border-bottom 0.1s;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
+.main-nav li:hover,
+.main-nav li:active {
     border-bottom: 2px solid #0072bb;
 }
 
@@ -196,7 +199,6 @@ header {
     cursor: pointer;
     display: none;
     position: relative;
-    z-index: 2;
 
 }
 
@@ -204,6 +206,7 @@ header {
     font-size: 200%;
     color: #fff;
     margin-bottom: 13%;
+    z-index: 1;
 }
 
 section {

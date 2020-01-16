@@ -48,6 +48,19 @@
         padding: 0 2%;
     }
 
+    .btn:hover {
+        background-color: #134260;
+    }
+
+    .btn-full:hover{
+        border: 1px solid #134260;
+    }
+
+    .btn-ghost:hover{
+        border: 1px solid #fff;
+        background-color: transparent;
+    }
+
 }
 
 /* Large phones: 481 to 767px */
