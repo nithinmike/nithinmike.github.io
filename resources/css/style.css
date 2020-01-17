@@ -52,8 +52,6 @@ h1, h2, h3 {
 
 h1 {
     font-weight: 300;
-    margin-top: 25px;
-    margin-bottom: 20px;
     color: #fff;
     font-size: 200%;
     word-spacing: 4px;
@@ -76,6 +74,8 @@ h3 {
     font-size: 100%;
     text-transform: uppercase;
     text-align: center;
+    text-decoration: none;
+    color: #fff;
 }
 
 section {
