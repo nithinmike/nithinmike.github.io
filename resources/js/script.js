@@ -30,4 +30,6 @@ $(document).ready(function(){
         }
     });
 
+    $('.js-properties-multiple').select2();
+
 });
