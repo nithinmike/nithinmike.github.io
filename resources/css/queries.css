@@ -1,9 +1,6 @@
 
-/* Big tablets to 1200px */
+/* Overrides any js hiding for mobile topnav */
 @media only screen and (min-width: 1076px) {
-
-    .row {padding: 0 2%; }
-
     .main-nav {
         display: block!important;
     }
@@ -13,17 +10,24 @@
     }
 }
 
+
 /* Small tablets: 768 to 1023px */
 @media only screen and (max-width: 1075px) {
-    section { padding: 60px 0; }
+    body {
+        font-size: 18px;
+    } /* Reduce reference font size from 20px to 18px */
+
+    section { padding: 60px 0; } /* reduced top/bottom padding for sections */
+
     .mobile-nav-icon {
         margin: 0 auto;
         display: block;
-    }
+    } /* Display the burger menu button */
+
     .main-nav {
         display: none;
         margin: 25px auto;
-    }
+    } /* Hide the top nav */
 
     .main-nav li {
         display: block;
@@ -31,7 +35,7 @@
         margin: 0;
         text-align: center;
         font-size: 125%;
-    }
+    } /* make top nav display vertically when shown */
 
     .main-nav li a:link,
     .main-nav li a:visited {
@@ -39,15 +43,12 @@
         border: 0;
     }
 
-    body {
-        font-size: 18px;
-    }
-
     .hero-text-box {
         width: 100%;
         padding: 0 2%;
-    }
+    } /* Prevents hero text from overflowing on sides */
 
+    /* Turn off all hover effects for mobile */
     .btn:hover {
         background-color: #134260;
     }
@@ -61,52 +62,39 @@
         background-color: transparent;
     }
 
-    .btn:active {
-        background-color: #0072bb;
-    }
-
-    .btn-full:active {
-        border: 1px solid #0072bb;
-    }
-
-    .btn-ghost:active {
-        border: 1px solid #0072bb;
-    }
-
     .main-nav li:hover {
         border: none;
+    }
+
+    /* Redeclare active states */
+    .btn:active {
+        background-color: #0072bb;
+        border: 1px solid #0072bb;
     }
 
     .main-nav li:active {
         border-bottom: 2px solid #0072bb;
     }
-
 }
+
 
 /* Large phones: 481 to 767px */
 @media only screen and (max-width: 767px) {
-    body {font-size: 18px;}
-    section {padding: 30px 0;}
-    .row,
-    .hero-text-box {padding: 0 4%;}
+    section {padding: 30px 0;} /* Reduce padding from 60 to 30 */
 
+    .row,
+    .hero-text-box {padding: 0 4%;} /* Increase padding on sides */
 
     .col {
         width: 100%;
         margin: 3.5% 0;
-    };
+    }; /* Stack columns */
 
     .col:first-child{
         margin: 1% 0 1% 0;
-    }
-
-
-
-    header {
-        max-height: 500px;
-    }
-
+    } /* Override grid.css settings */
 }
+
 
 /* Small phones: 0 to 480px */
 @media only screen and (max-width: 480px) {
@@ -115,18 +103,15 @@
     }
 }
 
+/* Stacking hero buttons for really narrow screens */
 @media only screen and (max-width: 341px) {
     body {
         font-size: 14px;
     }
+
     .btn {
         display: block;
         padding: 25px 30px;
         margin: 3% 1%;
     }
-
-    .btn-full:link {
-        margin: 3% 1%;
-    }
-
 }

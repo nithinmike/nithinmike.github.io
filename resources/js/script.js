@@ -3,41 +3,30 @@ $(document).ready(function(){
     var header_height = $("header").height();
     var nav_height = nav.height();
 
+    // Open/close mobile topnav
     $('.js--nav-icon').click(function() {
         var heroText = $('.hero-text-box');
 
         if (nav.is(':hidden')){
             heroText.fadeOut(100);
             nav.slideToggle(200, function(){
-                header_height = $("header").height();
-                nav_height = nav.height();
 
-                if (header_height < (nav_height+150)) {
-                    // $("header").animate({
-                    //     height: nav_height+150
-                    // }, 200);
-                    $("header").height(nav_height + 150);
+                if ($("header").height() < (nav.height()+150)) {
+                    $("header").height(nav.height()+150);
                 }
             });
         } else {
-            //$("header").height('');
             nav.slideToggle(100);
             heroText.fadeIn(200);
         }
-
     });
 
-    $(window).on('resize', function(){
-        // Change the width of the div
-        // header_height = $("header").height();
-        nav_height = nav.height();
 
-        if ((header_height < (nav_height+150)) && (!nav.is(':hidden'))) {
-            $("header").height(nav_height + 150);
-            // $("header").animate({
-            //     height: nav_height+150
-            // }, 200);
-            //$("header").height(nav_height + 150);
+    // Expand header if phone rotates and topnav is open
+    $(window).on('resize', function(){
+
+        if ((header_height < (nav.height()+150)) && (!nav.is(':hidden'))) {
+            $("header").height(nav.height()+150);
         }
     });
 
