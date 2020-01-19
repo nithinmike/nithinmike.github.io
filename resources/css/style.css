@@ -8,6 +8,10 @@
             box-sizing: border-box;
 } /* Remove default padding */
 
+*:focus {
+    outline: none;
+}
+
 button,
 textarea,
 input,
@@ -109,6 +113,11 @@ header {
             transform: translate(-50%, -50%);
 }
 
+.contact-header {
+    max-height: none;
+    min-height: 800px;
+}
+
 /* ---------------------------------------------------------------*/
 
 
@@ -116,7 +125,8 @@ header {
 /* ---------------------------------------------------------------*/
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -128,7 +138,8 @@ header {
 
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #134260;
     border: 1px solid #134260;
     color: #fff;
@@ -142,12 +153,16 @@ header {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #0072bb;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     border: 1px solid #0072bb;
 }
 
@@ -256,11 +271,11 @@ header {
     background-color: #ddd;
 }
 
-.contact-header {
+.hours-header {
     margin-bottom: 10px;
 }
 
-.contact-header,
+.hours-header,
 .contact-column {
     text-align: center;
 }
@@ -275,6 +290,49 @@ footer {
     text-align: center;
     font-size: 75%;
     padding-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------------*/
+
+
+/* ---------------------------- CONTACT FORM ------------------------------*/
+/* ------------------------------------------------------------------------*/
+
+.contact-form,
+.form-heading {
+    width: 60%;
+    position: absolute;
+    color: #fff;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    text-align: left;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    color: #000;
+}
+
+textarea {
+    height: 100px;
+}
+
+.form-heading {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+}
+
+.select2-container--default {
+    width: 100%!important; /* overrides js width */
 }
 
 /* ------------------------------------------------------------------------*/

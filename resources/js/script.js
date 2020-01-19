@@ -9,6 +9,7 @@ $(document).ready(function(){
 
         if (nav.is(':hidden')){
             heroText.fadeOut(100);
+            $('.js-contact-form').fadeOut(100);
             nav.slideToggle(200, function(){
 
                 if ($("header").height() < (nav.height()+150)) {
@@ -18,6 +19,7 @@ $(document).ready(function(){
         } else {
             nav.slideToggle(100);
             heroText.fadeIn(200);
+            $('.js-contact-form').fadeIn(200);
         }
     });
 

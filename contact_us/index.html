@@ -16,7 +16,7 @@
 
 
     <body>
-        <header>
+        <header class="contact-header">
             <div class="row">
                 <h1 class="logo"><a class="logo" href="../index.html">
                     XYZ Student Housing</a></h1>
@@ -35,18 +35,75 @@
                     </ul>
                 </div>
             </nav>
+
+            <div class="js-contact-form">
+                <div class="row">
+                    <h2 class="form-heading">We're happy to hear from you<h2>
+                </div>
+                <div class="row section-form">
+                    <form method="post" action="#" class="contact-form">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="name" id="name" placeholder="Your name" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="email" name="email" id="email" placeholder="Your email" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="properties[]">Properties of interest</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <select class="js-properties-multiple" name="properties[]" multiple="multiple" required>
+                                    <option value="AL">Location A</option>
+                                    <option value="WY">Location B</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>Comments</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <textarea name="comments" placeholder="Your message"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>&nbsp</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </header>
 
 
-        <section class="section-form">
+        <!-- <section class="section-form">
             <div class="row">
-                <h2>We're happy to hear from you<h2>
+                <h2 class="form-heading">We're happy to hear from you<h2>
             </div>
             <div class="row">
                 <form method="post" action="#" class="contact-form">
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label>Name</label>
+                            <label for="name">Name</label>
                         </div>
                         <div class="col span-2-of-3">
                             <input type="text" name="name" id="name" placeholder="Your name" required>
@@ -55,7 +112,7 @@
 
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label>Email</label>
+                            <label for="email">Email</label>
                         </div>
                         <div class="col span-2-of-3">
                             <input type="email" name="email" id="email" placeholder="Your email" required>
@@ -64,18 +121,36 @@
 
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label>Properties of interest</label>
+                            <label for="properties[]">Properties of interest</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <select class="js-properties-multiple" name="properties[]" multiple="multiple">
+                            <select class="js-properties-multiple" name="properties[]" multiple="multiple" required>
                                 <option value="AL">Location A</option>
                                 <option value="WY">Location B</option>
                             </select>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Comments</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="comments" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
                 </form>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- <section class="section-hours">
@@ -108,7 +183,36 @@
                 </div>
             </div>
         </section> -->
+        <section class="section-hours">
+            <div class="row">
 
+                <div class="col span-1-of-3 contact-column">
+                    <h3 class="hours-header">Hours</h3>
+                    <p class="contact-section">
+                        Mon-Fri: 9:00AM-5:30PM<br>
+                        Sat: November only (varies)
+                    </p>
+                </div>
+
+                <div class="col span-1-of-3 contact-column">
+                    <h3 class="hours-header">Location</h3>
+                    <p class="contact-section">
+                        XYZ Student Housing, Inc.<br>
+                        123 S. Forest Ave.<br>
+                        Ann Arbor Michigan 48104
+                    </p>
+                </div>
+
+                <div class="col span-1-of-3 contact-column">
+                    <h3 class="hours-header">Contact</h3>
+                    <p class="contact-section">
+                        Contact form<br>
+                        Telephone: 123.456.8000<br>
+                        Fax: 123.456.8222
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <footer>
             <p>Website by nithinmike</p>

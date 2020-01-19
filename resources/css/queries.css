@@ -8,6 +8,10 @@
     .hero-text-box {
         display: block!important;
     }
+
+    .js-contact-form {
+        display: block!important;
+    }
 }
 
 
@@ -93,6 +97,10 @@
     .col:first-child{
         margin: 1% 0 1% 0;
     } /* Override grid.css settings */
+
+    .contact-form .col {
+        margin: 2% 0 1% 0;
+    }
 }
 
 
@@ -100,6 +108,10 @@
 @media only screen and (max-width: 480px) {
     body {
         font-size: 16px;
+    }
+
+    .contact-form .col {
+        margin: 3% 0 2% 0;
     }
 }
 
