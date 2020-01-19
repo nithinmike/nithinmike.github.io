@@ -101,6 +101,12 @@
     .contact-form .col {
         margin: 2% 0 1% 0;
     }
+
+    .form-heading {
+        text-align: center;
+        position: absolute;
+        top: 15%;
+    }
 }
 
 
