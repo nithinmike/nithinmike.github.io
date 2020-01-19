@@ -107,7 +107,14 @@
         position: absolute;
         top: 15%;
     }
-}
+
+    .map-column {
+        padding-top: 70%;
+    }
+
+    .apt-select-row select {
+      width: 50%;
+    }
 
 
 /* Small phones: 0 to 480px */
@@ -118,6 +125,15 @@
 
     .contact-form .col {
         margin: 3% 0 2% 0;
+    }
+
+    .apt-select-row select,
+    .apt-select-row select:focus {
+      width: 75%;
+      background-position:
+        calc(99% - 20px) 0.9em,
+        calc(99% - 15px) 0.9em,
+        calc(98% - 2.5em) 0.3em;
     }
 }
 
@@ -131,5 +147,14 @@
         display: block;
         padding: 25px 30px;
         margin: 3% 1%;
+    }
+
+    .apt-select-row select,
+    .apt-select-row select:focus {
+      width: 100%;
+      background-position:
+        calc(100% - 20px) 1em,
+        calc(100% - 15px) 1em,
+        calc(98% - 2.5em) 0.4em;
     }
 }

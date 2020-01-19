@@ -38,6 +38,9 @@ body {
     overflow-x: hidden;
 } /* Body setup */
 
+.apartments-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/background-header.jpg);
+}
 /* ---------------------------------------------------------------*/
 
 
@@ -116,6 +119,12 @@ header {
 .contact-header {
     max-height: none;
     min-height: 800px;
+}
+
+.apartments-header {
+    min-height: 0px;
+    height: 85px!important; /* prevent header resizing from js swipebox */
+    background-image: none;
 }
 
 /* ---------------------------------------------------------------*/
@@ -259,6 +268,147 @@ input[type=submit]:active {
 
 .section-features {
     background-color: #fff;
+}
+
+/* ------------------------------------------------------------------------*/
+
+
+/* ------------------------- APARTMENTS SECTION ---------------------------*/
+/* ------------------------------------------------------------------------*/
+
+.section-apartments {
+    background-image: none;
+    padding: 10px;
+}
+
+.map-column {
+    position: relative;
+    overflow: hidden;
+    padding-top: 37%;
+}
+
+.map-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.img-column {
+    overflow: hidden;
+}
+
+.img-column .swipebox img {
+    width: 30%;
+    float: left;
+    display: inline-block;
+    margin-left: 1%;
+}
+
+.apt-select-row {
+  position: relative;
+  /*Don't really need this just for demo styling*/
+  text-align: center;
+}
+
+/*To remove button from IE11, thank you Matt */
+.apt-select-row select::-ms-expand {
+     display: none;
+}
+
+.apt-select-row select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  width: 33%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(97.5% - 20px) 0.9em,
+    calc(97.5% - 15px) 0.9em,
+    calc(98% - 2.5em) 0.25em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+
+.apt-select-row select:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(98% - 15px) 0.95em,
+    calc(98% - 20px) 0.95em,
+    calc(98% - 2.5em) 0.25em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: #fff;
+  outline: none;
+  color: #fff;
+}
+
+
+.apt-select-row select:-moz-focusring {
+  color: #fff;
+  outline: 0;
+}
+
+/* ------------------------------------------------------------------------*/
+
+
+/* ---------------------------- SHOWCASE SECTION --------------------------*/
+/* ------------------------------------------------------------------------*/
+
+.section-showcase {
+    padding: 0;
+}
+
+.locations-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.locations-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.location-photo {
+    width: 100%
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.location-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.location-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }
 
 /* ------------------------------------------------------------------------*/

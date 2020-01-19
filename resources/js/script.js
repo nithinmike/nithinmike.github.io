@@ -10,6 +10,7 @@ $(document).ready(function(){
         if (nav.is(':hidden')){
             heroText.fadeOut(100);
             $('.js-contact-form').fadeOut(100);
+            $('.apt-wrapper').fadeOut(100);
             nav.slideToggle(200, function(){
 
                 if ($("header").height() < (nav.height()+150)) {
@@ -20,6 +21,7 @@ $(document).ready(function(){
             nav.slideToggle(100);
             heroText.fadeIn(200);
             $('.js-contact-form').fadeIn(200);
+            $('.apt-wrapper').fadeIn(200);
         }
     });
 
@@ -33,5 +35,8 @@ $(document).ready(function(){
     });
 
     $('.js-properties-multiple').select2();
+    $( '.swipebox' ).swipebox();
+
+
 
 });

@@ -4,20 +4,22 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link rel="stylesheet" type="text/css" href="../vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/queries.css">
         <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../vendors/css/swipebox.css">
         <title>XYZ Student Housing</title>
     </head>
 
 
-    <body>
-        <header>
+    <body class="apartments-page">
+        <header class="apartments-header">
             <div class="row">
-                <h1 class="logo"><a class="logo" href="index.html">
+                <h1 class="logo"><a class="logo" href="../index.html">
                     XYZ Student Housing</a></h1>
                 <a class="mobile-nav-icon js--nav-icon"><i class="icon ion-ios-menu"></i></a>
             </div>
@@ -25,22 +27,47 @@
             <nav>
                 <div class="row">
                     <ul class="main-nav js--main-nav">
-                        <li><a href="apartments/index.html">Apartments</a></li>
+                        <li><a href="index.html">Apartments</a></li>
                         <li><a href="#">Parking</a></li>
                         <li><a href="#">Prospective Tenants</a></li>
                         <li><a href="#">Current Tenants</a></li>
                         <li><a href="#">Log In</a></li>
-                        <li><a href="contact_us/index.html">Contact Us</a><li>
+                        <li><a href="../contact_us/index.html">Contact Us</a><li>
                     </ul>
                 </div>
             </nav>
-
-            <div class="hero-text-box">
-                <h1>The best housing deals in Ann Arbor.</h1>
-                <a class="btn btn-full" href="#">View Apartments</a>
-                <a class="btn btn-ghost" href="#">Parking</a>
-            </div>
         </header>
+
+        <section class="section-apartments">
+            <div class="row apt-select-row">
+                <select class="apt-select minimal" name="apt-select">
+                   <option value="1">Location A</option>
+                   <option value="2">Location B</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-2 map-column">
+                    <iframe
+                        class="map-iframe"
+                        width="600"
+                        height="450"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDgopdXLr5IeKK56mLxSJ-EjYrRs0L47GA&q=Space+Needle,Seattle+WA" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="col span-1-of-2 img-column">
+                    <a href="../resources/img/location_a.jpg" class="swipebox" title="Location A">
+                    <img src="../resources/img/location_a.jpg" alt="Location A">
+                    </a>
+
+                    <a href="../resources/img/location_a_interior.jpeg" class="swipebox" title="Location A Interior">
+                    <img src="../resources/img/location_a_interior.jpeg" alt="Location A Interior">
+                    </a>
+                </div>
+            </div>
+        </section>
 
 
         <section class="section-features">
@@ -81,60 +108,7 @@
                 </div>
             </div>
         </section>
-
-        <section class="section-showcase">
-            <ul class="locations-showcase">
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_a.jpg" alt="Location A">
-                    </figure>
-                </li>
-
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_b.jpg" alt="Location B">
-                    </figure>
-                </li>
-
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_c.jpg" alt="Location C">
-                    </figure>
-                </li>
-
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_d.jpg" alt="Location D">
-                    </figure>
-                </li>
-            </ul>
-
-            <ul class="locations-showcase">
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_e.jpg" alt="Location E">
-                    </figure>
-                </li>
-
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_f.jpg" alt="Location F">
-                    </figure>
-                </li>
-
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_g.jpg" alt="Location G">
-                    </figure>
-                </li>
-
-                <li>
-                    <figure class="location-photo">
-                        <img src="resources/img/location_h.jpg" alt="Location H">
-                    </figure>
-                </li>
-            </ul>
-        </section>
+        
 
         <section class="section-hours">
             <div class="row">
@@ -167,13 +141,14 @@
             </div>
         </section>
 
-
         <footer>
             <p>Website by nithinmike</p>
         </footer>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="resources/js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+        <script src="../vendors/js/jquery.swipebox.js"></script>
+        <script src="../resources/js/script.js"></script>
     </body>
 </html>
