@@ -10,7 +10,8 @@ $(document).ready(function(){
         if (nav.is(':hidden')){
             heroText.fadeOut(100);
             $('.js-contact-form').fadeOut(100);
-            $('.apt-wrapper').fadeOut(100);
+            $('.js-apt-section').css('visibility', 'hidden');
+            $(".apt-select").css('visibility', 'hidden');
             nav.slideToggle(200, function(){
 
                 if ($("header").height() < (nav.height()+150)) {
@@ -18,10 +19,11 @@ $(document).ready(function(){
                 }
             });
         } else {
-            nav.slideToggle(100);
+            nav.slideToggle(0);
             heroText.fadeIn(200);
             $('.js-contact-form').fadeIn(200);
-            $('.apt-wrapper').fadeIn(200);
+            $('.js-apt-section').css('visibility', 'visible');
+            $(".apt-select").css('visibility', 'visible');
         }
     });
 

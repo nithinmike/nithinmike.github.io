@@ -270,6 +270,15 @@ input[type=submit]:active {
     background-color: #fff;
 }
 
+.learn-more-row {
+    text-align: center;
+}
+
+.section-apt-features {
+    padding: 40px 0 30px 0;
+    background-color: transparent;
+}
+
 /* ------------------------------------------------------------------------*/
 
 
@@ -296,21 +305,32 @@ input[type=submit]:active {
     border: 0;
 }
 
-.img-column {
+/* .img-column,
+.img-column .swipebox {
     overflow: hidden;
-}
+} */
 
-.img-column .swipebox img {
-    width: 30%;
+/* .img-column .swipebox img {
+    width: 100%;
     float: left;
     display: inline-block;
     margin-left: 1%;
-}
+    margin-bottom: 1%;
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+} */
+
+/* .img-column .swipebox img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+} */
 
 .apt-select-row {
   position: relative;
   /*Don't really need this just for demo styling*/
   text-align: center;
+  margin-bottom: 15px;
 }
 
 /*To remove button from IE11, thank you Matt */
@@ -328,6 +348,7 @@ input[type=submit]:active {
   text-align: center;
   background-color: transparent;
   color: #fff;
+  font-weight: 300;
 
   background-image:
     linear-gradient(45deg, transparent 50%, white 50%),
@@ -347,13 +368,13 @@ input[type=submit]:active {
 
 .apt-select-row select:focus {
   background-image:
-    linear-gradient(45deg, white 50%, transparent 50%),
-    linear-gradient(135deg, transparent 50%, white 50%),
+  linear-gradient(45deg, transparent 50%, white 50%),
+  linear-gradient(135deg, white 50%, transparent 50%),
     linear-gradient(to right, #ccc, #ccc);
   background-position:
-    calc(98% - 15px) 0.95em,
-    calc(98% - 20px) 0.95em,
-    calc(98% - 2.5em) 0.25em;
+  calc(97.5% - 20px) 0.9em,
+  calc(97.5% - 15px) 0.9em,
+  calc(98% - 2.5em) 0.25em;
   background-size:
     5px 5px,
     5px 5px,
@@ -368,6 +389,20 @@ input[type=submit]:active {
 .apt-select-row select:-moz-focusring {
   color: #fff;
   outline: 0;
+}
+
+.learn-more-btn:link,
+ .learn-more-btn:visited {
+    margin: 0 auto;
+    background-color: #0091ee;
+    border: 1px solid #0091ee;
+    font-weight: 400;
+}
+
+.learn-more-btn:hover,
+ .learn-more-btn:active {
+    background-color: #004977;
+    border: 1px solid #004977;
 }
 
 /* ------------------------------------------------------------------------*/
@@ -386,15 +421,16 @@ input[type=submit]:active {
 }
 
 .locations-showcase li {
-    display: block;
     float: left;
-    width: 25%;
+    width: 31%;
+    overflow: hidden;
+    margin-left: 1%;
+    margin-bottom: 1%;
 }
 
 .location-photo {
     width: 100%
     margin: 0;
-    overflow: hidden;
     background: #000;
 }
 
