@@ -68,6 +68,7 @@ h2 {
     font-weight: 300;
     font-size: 120%;
     word-spacing: 2px;
+    color: #222;
 }
 
 h3 {
@@ -86,7 +87,7 @@ h3 {
 }
 
 section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 /* ---------------------------------------------------------------*/
@@ -96,14 +97,14 @@ section {
 /* ---------------------------------------------------------------*/
 
 header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/background-header.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/background-header.jpg);
+    background-color: #cccc99;
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    max-height: 500px;
-    min-height: 400px;
     position: relative;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../resources/img/brooklyn_borough.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(../resources/img/brooklyn_borough.jpg);
+    height: 100vh;
 }
 
 .hero-text-box {
@@ -114,6 +115,10 @@ header {
     width: 1140px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+}
+
+.hero-text-box h3 {
+    color: #fff;
 }
 
 .contact-header {
@@ -205,6 +210,8 @@ input[type=submit]:active {
     overflow: scroll; /* Need for js function to work */
     scrollbar-width: none; /* Hide scrollbar Firefox */
     -ms-overflow-style: none;  /* Hide scrollbar Internet Explorer 10+ */
+    margin: 0 auto 20px auto;
+    padding-bottom: 5px;
 }
 
 .main-nav::-webkit-scrollbar { /* Hide scrollbar WebKit */
@@ -250,6 +257,27 @@ input[type=submit]:active {
 /* -------------------------- FEATURES SECTION ----------------------------*/
 /* ------------------------------------------------------------------------*/
 
+.copy-title {
+    text-align: center;
+    margin: 10px auto 10px auto;
+}
+
+.copy-title:after {
+    display: block;
+    height: 2px;
+    background-color: #0072bb;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.main-copy {
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+}
+
 .icon-big {
     font-size: 250%;
     display: block;
@@ -260,6 +288,8 @@ input[type=submit]:active {
 
 .feature-column h2 {
     margin-bottom: 10px;
+    margin-top: 15px;
+    line-height: 100%;
 }
 
 .feature-column {
@@ -279,6 +309,17 @@ input[type=submit]:active {
     background-color: transparent;
 }
 
+.main-copy {
+    padding-bottom: 40px;
+}
+
+.section-features img {
+    width: 20%;
+}
+
+.section-features .img1 {
+    width: 35%;
+}
 /* ------------------------------------------------------------------------*/
 
 
@@ -451,6 +492,79 @@ input[type=submit]:active {
     transform: scale(1.03);
 }
 
+.past-clients {
+    background-color: #fff;
+}
+
+.clients-showcase {
+    width: 100%;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.clients-showcase li{
+    float: left;
+    display: block;
+    width: 25%;
+    height: 175px;
+}
+
+.client-logo {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.client-logo img {
+    opacity: 0.8;
+    width: 35%;
+    height: auto;
+    margin: auto;
+    vertical-align: middle;
+    transform: scale(1.0);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.client-logo img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.clients-header {
+    margin: 0 auto 10px auto;
+    text-align: center;
+    color: #555;
+}
+
+.clients-header:after {
+    display: block;
+    height: 2px;
+    background-color: #0072bb;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.logo1 img, .logo3 img {
+    width: 75%;
+}
+
+.logo2 img {
+    width: 60%;
+}
+
+.past-clients {
+    padding: 15px 0 60px 0;
+}
 /* ------------------------------------------------------------------------*/
 
 
@@ -525,4 +639,19 @@ textarea {
     width: 100%!important; /* overrides js width */
 }
 
+/* ------------------------------------------------------------------------*/
+
+/* ------------------------------ CAROUSEL --------------------------------*/
+/* ------------------------------------------------------------------------*/
+
+.carousel {
+    margin: 0 auto 0 auto;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.carousel-item .img-fluid {
+    width:100%;
+    height:100%;
+}
 /* ------------------------------------------------------------------------*/

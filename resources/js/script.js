@@ -36,9 +36,14 @@ $(document).ready(function(){
         }
     });
 
+    $('.apt-select').change(function () {
+        $('.js-apt-div').hide();
+        $('.'+$(this).val()).fadeIn();
+    });
+
     $('.js-properties-multiple').select2();
     $( '.swipebox' ).swipebox();
-
+    $('.carousel').carousel();
 
 
 });
