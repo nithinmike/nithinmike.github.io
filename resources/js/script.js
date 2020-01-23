@@ -21,25 +21,12 @@ function initialize() {
         title: locations[count][3]
         });
         
-    google.maps.event.addListener(marker, 'mouseover', (function (marker, count) {
-        return function () {
-            infowindow.setContent(locations[count][3]);
-            infowindow.open(map, marker);
-        }
-    })(marker, count));
-        
-    google.maps.event.addListener(marker, 'click', (function (marker, count) {
-        return function () {
-            infowindow.setContent(locations[count][3]);
-            infowindow.open(map, marker);
-        }
-    })(marker, count));
-        
-    google.maps.event.addListener(marker, 'mouseout', (function (marker, count) {
-        return function () {
-            infowindow.close(map, marker);
-        }
-    })(marker, count));
+        google.maps.event.addListener(marker, 'click', (function (marker, count) {
+            return function () {
+                infowindow.setContent(locations[count][3]);
+                infowindow.open(map, marker);
+            }
+        })(marker, count));
         
   }
         
