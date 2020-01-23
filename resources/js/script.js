@@ -1,4 +1,8 @@
-$(document).ready(function(){
+$(document).ready(
+    
+     
+    
+    function(){
     var nav = $('.js--main-nav');
     var header_height = $("header").height();
     var nav_height = nav.height();
@@ -45,9 +49,10 @@ $(document).ready(function(){
     $( '.swipebox' ).swipebox();
     $('.carousel').carousel();
     
-    
-    
-    function initMap() {
+    }
+);
+
+function initMap() {
         var center = {lat: 34.052235, lng: -118.243683};  
         var locations = [
     ['Philz Coffee<br>\
@@ -87,5 +92,3 @@ $(document).ready(function(){
   }
         
 }
-
-});
