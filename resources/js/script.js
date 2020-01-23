@@ -39,6 +39,7 @@ function initMap() {
   }
         
 }
+google.maps.event.addDomListener(window, "load", initMap);
 
 $(document).ready(
     function(){
