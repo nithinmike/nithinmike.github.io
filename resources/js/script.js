@@ -4,9 +4,15 @@ function initialize() {
             info: '<h5>Forest Place</h5><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
             name: 'Forest Place'
         };
+    
+        var Abbey = {
+            info: '<h5>The Abbey</h5><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
+            name: 'Forest Place'
+        };
         
         var locations = [
-            [Forest.info,   34.046438, -118.259653, Forest.name]
+            [Forest.info,   34.046438, -118.259653, Forest.name],
+            [Abbey.info,   34.046438, -118.259653, Abbey.name]
         ];
         
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -21,7 +27,7 @@ function initialize() {
         title: locations[count][3]
         });
         
-        google.maps.event.addListener(marker, 'mouseover', (function (marker, count) {
+        google.maps.event.addListener(marker, 'click', (function (marker, count) {
             return function () {
                 infowindow.setContent(locations[count][0]);
                 infowindow.open(map, marker);
@@ -31,13 +37,6 @@ function initialize() {
         
         
   }
-    
-    google.maps.event.addListener(infowindow, 'mouseout', (function (marker, count) {
-                return function () {
-                    infowindow.setContent(locations[count][0]);
-                    infowindow.open(map, marker);
-                }
-            })(marker, count));
         
 }
 
