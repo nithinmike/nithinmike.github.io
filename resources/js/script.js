@@ -7,7 +7,7 @@ function initialize() {
     };
 
     var Abbey = {
-        info: '<h4>The Abbey</h4><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
+        info: '<h4>The Abbey</h4><br>909 Church St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
         name: 'The Abbey'
     };
 
@@ -27,8 +27,8 @@ function initialize() {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[count][1], locations[count][2]),
             map: map,
-            title: locations[count][3]
-            label: count.toString();
+            title: locations[count][3],
+            label: (count+1).toString()
         });
 
         google.maps.event.addListener(marker, 'click', (function (marker, count) {
