@@ -1,5 +1,6 @@
 function initialize() {
     var center = {lat: 42.2729368, lng: -83.7346785};
+    
     var Forest = {
         info: '<h5>Forest Place</h5><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
         name: 'Forest Place'
@@ -16,8 +17,8 @@ function initialize() {
     ];
         
     var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 9,
-    center: center
+        zoom: 9,
+        center: center
     });
     
     var infowindow =  new google.maps.InfoWindow({});
