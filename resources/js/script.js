@@ -90,7 +90,7 @@ $(document).ready(
 
         $('.js-properties-multiple').select2();
         $( '.swipebox' ).swipebox();
-        $('.carousel').carousel();
+//        $('.carousel').carousel();
     
     }
 );
