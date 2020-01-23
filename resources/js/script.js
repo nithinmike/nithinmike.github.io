@@ -2,12 +2,12 @@ function initialize() {
     var center = {lat: 42.2729368, lng: -83.7346785};
     
     var Forest = {
-        info: '<h5>Forest Place</h5><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
+        info: '<h4>Forest Place</h4><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
         name: 'Forest Place'
     };
 
     var Abbey = {
-        info: '<h5>The Abbey</h5><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
+        info: '<h4>The Abbey</h4><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
         name: 'Forest Place'
     };
 
