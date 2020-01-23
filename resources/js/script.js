@@ -67,7 +67,7 @@ $(document).ready(function(){
    <a href="https://goo.gl/maps/WDr2ef3ccVz">Get Directions</a>', 34.142823, -118.254569]
     ];
         
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementsByClassName('map-column'), {
     zoom: 9,
     center: center
     });
