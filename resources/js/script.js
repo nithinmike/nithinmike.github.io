@@ -21,7 +21,14 @@ function initialize() {
         title: locations[count][3]
         });
         
-        google.maps.event.addListener(marker, 'click', (function (marker, count) {
+        google.maps.event.addListener(marker, 'mouseover', (function (marker, count) {
+            return function () {
+                infowindow.setContent(locations[count][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, count));
+        
+        google.maps.event.addListener(infowindow, 'mouseout', (function (marker, count) {
             return function () {
                 infowindow.setContent(locations[count][0]);
                 infowindow.open(map, marker);
