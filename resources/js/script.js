@@ -1,4 +1,4 @@
-function initMap() {
+function initialize() {
         var center = {lat: 34.052235, lng: -118.243683};  
         var locations = [
     ['Philz Coffee<br>\
@@ -39,7 +39,10 @@ function initMap() {
   }
         
 }
-google.maps.event.addDomListener(window, "load", initMap);
+
+function initMap() {
+    google.maps.event.addDomListener(window, "load", initialize);
+}
 
 $(document).ready(
     function(){
