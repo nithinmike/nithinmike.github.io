@@ -36,8 +36,8 @@ body {
     font-size: 20px; /* Reference font size for all text */
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
-    height: 100%;
     width: 100%;
+    height: 100%;
 } /* Body setup */
 
 .apartments-page {
