@@ -28,14 +28,16 @@ function initialize() {
             }
         })(marker, count));
         
-        google.maps.event.addListener(infowindow, 'mouseout', (function (marker, count) {
-            return function () {
-                infowindow.setContent(locations[count][0]);
-                infowindow.open(map, marker);
-            }
-        })(marker, count));
+        
         
   }
+    
+    google.maps.event.addListener(infowindow, 'mouseout', (function (marker, count) {
+                return function () {
+                    infowindow.setContent(locations[count][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, count));
         
 }
 
