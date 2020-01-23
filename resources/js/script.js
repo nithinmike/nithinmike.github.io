@@ -2,15 +2,50 @@ function initialize() {
     var center = {lat: 42.2729368, lng: -83.7346785};
     
     var Forest = {
-        info: '<h4>Forest Place</h4><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
+        info: '<h4>Forest Place</h4><br>721 S Forest Ave<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/ibesHzZJxtVSUM2m6">Get Directions</a>',
         name: 'Forest Place'
     };
 
     var Abbey = {
-        info: '<h4>The Abbey</h4><br>909 Church St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/L8ETMBt7cRA2">View Apartment</a><br><a href="https://goo.gl/maps/L8ETMBt7cRA2">Get Directions</a>',
+        info: '<h4>The Abbey</h4><br>909 Church St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/hrKDVuUX25ZKsnpu7">View Apartment</a><br><a href="https://goo.gl/maps/hrKDVuUX25ZKsnpu7">Get Directions</a>',
         name: 'The Abbey'
     };
-
+    
+    var Algonquin = {
+        info: '<h4>The Algonquin</h4><br>1330 N University Ct<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/hrKDVuUX25ZKsnpu7">View Apartment</a><br><a href="https://goo.gl/maps/Ye2pLKAjMeeJ5zY67">Get Directions</a>',
+        name: 'The Algonquin'
+    };
+    
+    var Dean = {
+        info: '<h4>The Dean</h4><br>1021 Vaughn St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/yNKEd8i9bhryzcP8A">View Apartment</a><br><a href="https://goo.gl/maps/yNKEd8i9bhryzcP8A">Get Directions</a>',
+        name: 'The Dean'
+    };
+    
+    var Forum = {
+        info: '<h4>The Forum</h4><br>726 S State St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/UQriUgjGQVpgESER6">View Apartment</a><br><a href="https://goo.gl/maps/UQriUgjGQVpgESER6">Get Directions</a>',
+        name: 'The Forum'
+    };
+    
+    var Lion = {
+        info: '<h4>The Lion</h4><br>525 Walnut St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/Bv1wMiYG5UEymf1NA">View Apartment</a><br><a href="https://goo.gl/maps/Bv1wMiYG5UEymf1NA">Get Directions</a>',
+        name: 'The Lion'
+    };
+    
+    var Lodge = {
+        info: '<h4>The Lodge</h4><br>1333 Wilmot St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/syhwwQdq5XHQtD5cA">View Apartment</a><br><a href="https://goo.gl/maps/syhwwQdq5XHQtD5cA">Get Directions</a>',
+        name: 'The Lodge'
+    };
+    
+    var S_Division = {
+        info: '<h4>344 S Division</h4><br>344 S Division St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/kMV4t1rWGRzj7rXn9">View Apartment</a><br><a href="https://goo.gl/maps/kMV4t1rWGRzj7rXn9">Get Directions</a>',
+        name: '344 S Division'
+    };
+    
+    var S_Division = {
+        info: '<h4>344 S Division</h4><br>344 S Division St<br>Ann Arbor, MI 48104<br><a href="https://goo.gl/maps/kMV4t1rWGRzj7rXn9">View Apartment</a><br><a href="https://goo.gl/maps/kMV4t1rWGRzj7rXn9">Get Directions</a>',
+        name: '344 S Division'
+    };
+    
     var locations = [
         [Forest.info, 42.2729368, -83.7346785, Forest.name],
         [Abbey.info, 42.2711901, -83.7363386, Abbey.name]
