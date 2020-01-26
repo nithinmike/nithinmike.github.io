@@ -25,14 +25,27 @@
         </div>
         
         <iframe src="https://www.google.com/maps/d/embed?mid=1vX8mFQOZxTyYdR5cMDXRTvZZzR8F18XR" width="640" height="480"></iframe>
+    
         
         <style>
-            #FPMap23 area:hover{
-                background-color: rgba(0, 0, 0, 0.1);
+            .map-div {
+                width: 60%;
+                height: 80%;
+                position: relative;
+                margin: auto;
             }
+            
+            img[usemap] {
+		      border: none;
+		      height: auto;
+		      max-width: 100%;
+		      width: auto;
+	       }
+            
         </style>
         
-        <p><map id="FPMap23">
+        <div class="map-div">
+            <map id="FPMap23">
             <area href="abbey.htm" shape="circle" coords="434, 433, 11">
             <area href="algonquin.htm" shape="circle" coords="489, 212, 13">
             <area href="dean.htm" shape="circle" coords="390, 501, 13">
@@ -53,9 +66,14 @@
             <area href="312_Thayer.htm" shape="circle" coords="308, 42, 11">
             <area href="212_214_Washington.htm" shape="circle" coords="148, 142, 12">
             <area href="934_Dewey.htm" shape="circle" coords="319, 596, 12">
-            <area href="508Division.htm" shape="circle" coords="194, 283, 11"></map><img border="0" src="https://www.primesh.com/Map/Map.png" usemap="#FPMap23" width="640" height="640"></p>
+            <area href="508Division.htm" shape="circle" coords="194, 283, 11"></map><img border="0" src="https://www.primesh.com/Map/Map.png" usemap="#FPMap23" width="640" height="640">
+        </div>
+        
+        <div id="map"></div>
     </body>
     
+
+        
     <script>
         function initialize() {
             var center = {lat: 42.2729368, lng: -83.7346785};
@@ -214,6 +232,74 @@
         function initMap() {
             google.maps.event.addDomListener(window, "load", initialize);
         }
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        <script>
+        ;(function($) {
+	       $.fn.rwdImageMaps = function() {
+		      var $img = this;
+
+		var rwdImageMap = function() {
+			$img.each(function() {
+				if (typeof($(this).attr('usemap')) == 'undefined')
+					return;
+
+				var that = this,
+					$that = $(that);
+
+				// Since WebKit doesn't know the height until after the image has loaded, perform everything in an onload copy
+				$('<img />').on('load', function() {
+					var attrW = 'width',
+						attrH = 'height',
+						w = $that.attr(attrW),
+						h = $that.attr(attrH);
+
+					if (!w || !h) {
+						var temp = new Image();
+						temp.src = $that.attr('src');
+						if (!w)
+							w = temp.width;
+						if (!h)
+							h = temp.height;
+					}
+
+					var wPercent = $that.width()/100,
+						hPercent = $that.height()/100,
+						map = $that.attr('usemap').replace('#', ''),
+						c = 'coords';
+
+					$('map[name="' + map + '"]').find('area').each(function() {
+						var $this = $(this);
+						if (!$this.data(c))
+							$this.data(c, $this.attr(c));
+
+						var coords = $this.data(c).split(','),
+							coordsPercent = new Array(coords.length);
+
+						for (var i = 0; i < coordsPercent.length; ++i) {
+							if (i % 2 === 0)
+								coordsPercent[i] = parseInt(((coords[i]/w)*100)*wPercent);
+							else
+								coordsPercent[i] = parseInt(((coords[i]/h)*100)*hPercent);
+						}
+						$this.attr(c, coordsPercent.toString());
+					});
+				}).attr('src', $that.attr('src'));
+			});
+		};
+		$(window).resize(rwdImageMap).trigger('resize');
+
+		return this;
+	};
+})(jQuery);
+    </script>
+    
+    <script>
+        $(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+        });
     </script>
     
     <script
