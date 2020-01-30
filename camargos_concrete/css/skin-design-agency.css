@@ -3799,7 +3799,7 @@ only screen and (				min-resolution: 2dppx) {
 	height: 2px;
 	background-color: #fe582d;
 	content: " ";
-	width: 70%;
+	width: 20%;
 	margin: 1rem auto 0 auto;
 }
 
@@ -3848,4 +3848,12 @@ iframe {
 
 .fb-link {
 	color: blue!important;
+}
+
+#services {
+    background-color: #ddd;
+}
+
+#contact {
+    background-color: #ddd;
 }
