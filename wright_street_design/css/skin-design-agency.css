@@ -3788,3 +3788,7 @@ only screen and (				min-resolution: 2dppx) {
 .awards-row .column {
 	padding-top: 3rem;
 }
+
+.width-fix {
+	max-width: 1980px;
+}
