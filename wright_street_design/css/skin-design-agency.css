@@ -3762,10 +3762,10 @@ only screen and (				min-resolution: 2dppx) {
 
 	/* Hero Sections */
 	.hero-5-1 .media-column{
-		background-image: url(../images/design-agency/generic/hero-half-1@2x.jpg);
+		background-image: url(../images/design-agency/portfolio/hero-half-1@2x.jpg);
 	}
 	.hero-5-2 .media-column{
-		background-image: url(../images/team/hero-half-2@2x.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/design-agency/portfolio/grid/no-margins/t_img.jpeg);
 	}
 
 	/* Call to Action Sections */
