@@ -3791,5 +3791,5 @@ only screen and (				min-resolution: 2dppx) {
 
 .width-fix {
 	max-width: 1980px;
-	margin: 0 auto;
+	margin: 0 auto!important;
 }
